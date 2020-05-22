@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      media="only screen and (min-width: 400px)"
+      href="./assets/css/escritorio.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <a href="#" class="btn-menu">
+          Shortly <i class="icon fa fa-bars"></i>
+        </a>
+
+        <div class="menu">
+          <ul class="list-menu">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+          <div class="btns-menu">
+            <div class="line"></div>
+            <button id="Login">Login</button>
+            <button id="Sing">Sing Up</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <article>
+      <section class="more-than">
+        <div class="more-one">
+          <h1>
+            More than just
+            <br />shorter links
+          </h1>
+          <p>
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <div class="get-btn">
+            <button>Get Started</button>
+          </div>
+        </div>
+        <div class="more-two">
+          <img src="./images/illustration-working.svg" alt="" />
+        </div>
+      </section>
+
+      <section id="caja-father">
+        <div class="caja-shorten">
+          <input
+            type="text"
+            class="caja-text"
+            placeholder="Shorten a link here"
+          />
+          <input type="button" value="Shorten it!" class="btn-shorten" />
+        </div>
+      </section>
+
+      <section id="caja-father-2">
+        <div class="advanced">
+          <h1>Advanced Statistics</h1>
+          <p>
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
+          </p>
+        </div>
+        <!-- <div class="container-box">
+          <div class="line-green"></div>
+          <div class="brand-box">
+            <div class="brand-son">
+              <div class="circle"></div>
+              <div class="brand-son-son">
+                <div class="cont-data">
+                  <h4>Brand Recognition</h4>
+                  <p>
+                    Boost your brand recognition with each click. Generic links
+                    don’t mean a thing. Branded links help instil confidence in
+                    your content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="brand-box-1">
+            <div class="brand-son">
+              <div class="circle"></div>
+              <div class="brand-son-son">
+                <div class="cont-data">
+                  <h4>Brand Recognition</h4>
+                  <p>
+                    Boost your brand recognition with each click. Generic links
+                    don’t mean a thing. Branded links help instil confidence in
+                    your content.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div
+          class="bc-container-box"
+          id="bc-container"
+          style="margin-top: 35px;"
+        >
+          <div class="bc-linea" id="bc-by-linea"></div>
+          <div class="bc-new">
+            <div class="bc-box" style="margin-top: 0px !important;">
+              <div class="bc-circle">
+                <img src="./images/icon-brand-recognition.svg" alt="" />
+              </div>
+              <div class="bc-min-box">
+                <h4>Brand Recognition</h4>
+                <p>
+                  Boost your brand recognition with each click. Generic links
+                  don’t mean a thing. Branded links help instil confidence in
+                  your content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bc-new">
+            <div class="bc-box">
+              <div class="bc-circle">
+                <img src="./images/icon-detailed-records.svg" alt="" />
+              </div>
+              <div class="bc-min-box">
+                <h4>Brand Recognition</h4>
+                <p>
+                  Boost your brand recognition with each click. Generic links
+                  don’t mean a thing. Branded links help instil confidence in
+                  your content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bc-new">
+            <div class="bc-box">
+              <div class="bc-circle">
+                <img src="./images/icon-fully-customizable.svg" alt="" />
+              </div>
+              <div class="bc-min-box">
+                <h4>Brand Recognition</h4>
+                <p>
+                  Boost your brand recognition with each click. Generic links
+                  don’t mean a thing. Branded links help instil confidence in
+                  your content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="caja-father-3">
+        <div>
+          <h1>Boost your links today</h1>
+          <div class="get-btn">
+            <button>Get Started</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="caja-father-4">
+        <div>
+          <h1>Shortly</h1>
+          <div>
+            <div class="bc-component">
+              <h5>Features</h5>
+              <ul>
+                <li>Link Shortening</li>
+                <li>Branded Links</li>
+                <li>Analytics</li>
+              </ul>
+            </div>
+            <div class="bc-component">
+              <h5>Resources</h5>
+              <ul>
+                <li>Blog</li>
+                <li>Developers</li>
+                <li>Support</li>
+              </ul>
+            </div>
+            <div class="bc-component">
+              <h5>Company</h5>
+              <ul>
+                <li>About</li>
+                <li>Our Team</li>
+                <li>Careers</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+            <div class="bc-component bc-iconos">
+              <div>
+                <img src="./images/icon-facebook.svg" alt="" />
+              </div>
+              <div>
+                <img src="./images/icon-twitter.svg" alt="" />
+              </div>
+              <div>
+                <img src="./images/icon-pinterest.svg" alt="" />
+              </div>
+              <div>
+                <img src="./images/icon-instagram.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. <br />Coded by <a href="#">Anthony Tonatihu Rosales Ceja</a>.
+    </div>
+
+    <!-- JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
