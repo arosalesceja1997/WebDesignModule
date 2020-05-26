@@ -94,11 +94,17 @@
       <section id="caja-father">
         <div class="caja-shorten">
           <input
+            id="x-shorten"
             type="text"
             class="caja-text"
             placeholder="Shorten a link here"
           />
-          <input type="button" value="Shorten it!" class="btn-shorten" />
+          <input
+            type="button"
+            value="Shorten it!"
+            class="btn-shorten"
+            onclick="mostrar(document.getElementById('x-shorten').value)"
+          />
         </div>
       </section>
 
@@ -230,9 +236,15 @@
     </div>
 
     <!-- JS -->
-    <script
+    <!-- <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script> -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/index.js"></script>
