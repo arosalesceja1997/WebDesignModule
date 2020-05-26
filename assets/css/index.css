@@ -430,6 +430,29 @@ article .more-than .more-two {
     width: -webkit-calc(30% - 65px);
     width: -moz-calc(30% - 65px);
   }
+  article #caja-father-2 .bc-container-box {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 100px;
+    width: calc(100% - 200px);
+  }
+  article #caja-father-2 .bc-container-box .bc-linea {
+    height: 5% !important;
+    border-bottom: 6px solid #2bd1d1;
+  }
+  article #caja-father-2 .bc-container-box .bc-new {
+    margin: 10px;
+  }
+  article #caja-father-2 .bc-container-box .x1 {
+    margin-top: 0px !important;
+  }
+  article #caja-father-2 .bc-container-box .x2 {
+    margin-top: 75px !important;
+  }
+  article #caja-father-2 .bc-container-box .x3 {
+    margin-top: 150px !important;
+  }
   article #caja-father-3 {
     background-image: url("../../images/bg-boost-desktop.svg");
   }
