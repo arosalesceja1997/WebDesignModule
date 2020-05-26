@@ -1,7 +1,7 @@
 * {
   padding: 0px;
   margin: 0px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
 
   a {
@@ -21,12 +21,11 @@
     border-radius: 50px;
     background-color: #2bd1d1;
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
   }
-
 }
 
 .nav-bar {
@@ -82,13 +81,15 @@
         margin-bottom: 30px;
       }
     }
-
   }
 }
 
+// Segundo nav
+#escritorio {
+  display: none;
+}
 
 article {
-
   // Parte 1
   .more-than {
     display: flex;
@@ -289,12 +290,12 @@ article {
     justify-content: center;
     align-items: center;
 
-    div>h1 {
+    div > h1 {
       color: white;
       font-size: 28px;
     }
 
-    div>div>button {
+    div > div > button {
       color: white;
       font-size: 20px;
       height: 50px !important;
@@ -309,13 +310,13 @@ article {
     text-align: center;
     color: white;
 
-    div>h1 {
+    div > h1 {
       padding-top: 40px;
       font-size: 38px;
       font-weight: 700;
     }
 
-    div>div>.bc-component {
+    div > div > .bc-component {
       margin-top: 25px;
       font-size: 18px;
       font-weight: 100;
@@ -326,7 +327,7 @@ article {
         padding-bottom: 20px;
       }
 
-      ul>li {
+      ul > li {
         padding-bottom: 10px;
         opacity: 0.6;
         cursor: pointer;
@@ -338,7 +339,7 @@ article {
       justify-content: center;
       flex-direction: row;
 
-      div>img {
+      div > img {
         margin: 15px 15px;
         cursor: pointer;
       }
@@ -352,5 +353,193 @@ article {
 
   a {
     color: hsl(228, 45%, 44%);
+  }
+}
+
+@media screen and(min-width: 900px) {
+  #bc-movil {
+    display: none !important;
+  }
+
+  #escritorio {
+    display: block;
+    width: 100%;
+    position: fixed;
+    height: 70px;
+    z-index: 2;
+    background-color: white;
+    .left {
+      float: left;
+      width: 60%;
+      .link {
+        background-color: white;
+        color: black;
+        display: block;
+        float: left;
+        width: auto;
+        padding-top: 16px;
+        padding-left: 100px;
+        padding-right: 15px;
+        h1 {
+          font-size: 28px;
+        }
+      }
+      .main {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 70px;
+        .sub {
+          padding: 15px;
+          a {
+            color: gray !important;
+          }
+        }
+      }
+    }
+
+    .right {
+      float: left;
+      background-color: white;
+      width: 40%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .bc-right {
+        padding-right: 100px;
+        width: 65%;
+        display: flex;
+        justify-content: space-around;
+        .bc-btn {
+          width: 40%;
+          border: none;
+          border-radius: 25px;
+          height: 40px;
+          background-color: #28d0d1;
+          color: white;
+        }
+
+        .bc-btn-2 {
+          width: 40%;
+          border: none;
+          border-radius: 25px;
+          height: 40px;
+          background-color: white;
+          color: gray;
+        }
+
+        .bc-btn-2:hover {
+          background-color: #28d0d1;
+          color: white;
+        }
+
+        .bc-btn:hover {
+          background-color: white;
+          color: gray;
+        }
+      }
+    }
+  }
+
+  article {
+    .more-than {
+      flex-direction: row;
+      height: 490px;
+      padding-top: 125px;
+
+      .more-one,
+      .more-two {
+        width: 50%;
+      }
+
+      .more-one {
+        padding-left: 100px;
+      }
+
+      .more-two {
+        margin-top: 0px;
+
+        img {
+          height: auto;
+          max-height: 450px;
+        }
+      }
+    }
+
+    #caja-father {
+      padding: 0px 100px;
+      width: calc(100% - 200px);
+
+      .caja-shorten {
+        background-image: url("../../images/bg-shorten-desktop.svg");
+        background-position: top left;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .caja-text {
+          padding-left: 15px;
+          width: calc(70% - 65px);
+          width: -webkit-calc(70% - 65px);
+          width: -moz-calc(70% - 65px);
+          color: #9e9aa7;
+          float: left;
+        }
+
+        .btn-shorten {
+          float: left;
+          margin-top: 15px !important;
+          width: calc(30% - 65px);
+          width: -webkit-calc(30% - 65px);
+          width: -moz-calc(30% - 65px);
+        }
+      }
+    }
+
+    #caja-father-2 {
+    }
+
+    #caja-father-3 {
+      background-image: url("../../images/bg-boost-desktop.svg");
+    }
+
+    #caja-father-4 {
+      height: 400px;
+      .bc-master {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 200px;
+
+        h1 {
+          flex-grow: 1;
+          padding-left: 60px;
+        }
+
+        div {
+          flex-grow: 2;
+          display: inline-flex;
+          flex-direction: row;
+          justify-content: space-around;
+          .bc-component {
+            margin-top: 160px;
+            width: calc(100% / 5);
+            display: flex;
+            flex-direction: column;
+          }
+
+          .bc-iconos {
+            display: flex;
+            flex-direction: row;
+            height: 50px;
+            padding-right: 100px;
+          }
+        }
+      }
+    }
   }
 }

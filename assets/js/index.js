@@ -4,7 +4,7 @@ $(document).ready(function () {
   });
 
   $(window).resize(function () {
-    if ($(document).width() > 1) {
+    if ($(document).width() > 1 && $(document).width() < 900) {
       // || $(document).width() < 450
       //   $(".nav-bar .menu").css({ display: "block" });
       $(".menu").css({ display: "none" });
@@ -13,12 +13,12 @@ $(document).ready(function () {
 
   let prevH = $("#bc-container").height();
   let bclinea = $("#bc-by-linea").css("height", prevH);
-  $("#bc-container").attrchange({
-    callback: function (e) {
-      let curH = $(this).height();
-      if (prevH !== curH) {
-        bclinea = curH;
-      }
-    },
-  });
+  // $("#bc-container").attrchange({
+  //   callback: function (e) {
+  //     let curH = $(this).height();
+  //     if (prevH !== curH) {
+  //       bclinea = curH;
+  //     }
+  //   },
+  // });
 });

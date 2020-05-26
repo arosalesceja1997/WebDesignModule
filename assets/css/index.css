@@ -72,6 +72,10 @@
   margin-bottom: 30px;
 }
 
+#escritorio {
+  display: none;
+}
+
 article .more-than {
   display: flex;
   flex-direction: column-reverse;
@@ -295,6 +299,172 @@ article #caja-father-4 .bc-iconos div > img {
 }
 .attribution a {
   color: #3e52a3;
+}
+
+@media screen and (min-width: 900px) {
+  #bc-movil {
+    display: none !important;
+  }
+
+  #escritorio {
+    display: block;
+    width: 100%;
+    position: fixed;
+    height: 70px;
+    z-index: 2;
+    background-color: white;
+  }
+  #escritorio .left {
+    float: left;
+    width: 60%;
+  }
+  #escritorio .left .link {
+    background-color: white;
+    color: black;
+    display: block;
+    float: left;
+    width: auto;
+    padding-top: 16px;
+    padding-left: 100px;
+    padding-right: 15px;
+  }
+  #escritorio .left .link h1 {
+    font-size: 28px;
+  }
+  #escritorio .left .main {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70px;
+  }
+  #escritorio .left .main .sub {
+    padding: 15px;
+  }
+  #escritorio .left .main .sub a {
+    color: gray !important;
+  }
+  #escritorio .right {
+    float: left;
+    background-color: white;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  #escritorio .right .bc-right {
+    padding-right: 100px;
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+  }
+  #escritorio .right .bc-right .bc-btn {
+    width: 40%;
+    border: none;
+    border-radius: 25px;
+    height: 40px;
+    background-color: #28d0d1;
+    color: white;
+  }
+  #escritorio .right .bc-right .bc-btn-2 {
+    width: 40%;
+    border: none;
+    border-radius: 25px;
+    height: 40px;
+    background-color: white;
+    color: gray;
+  }
+  #escritorio .right .bc-right .bc-btn-2:hover {
+    background-color: #28d0d1;
+    color: white;
+  }
+  #escritorio .right .bc-right .bc-btn:hover {
+    background-color: white;
+    color: gray;
+  }
+
+  article .more-than {
+    flex-direction: row;
+    height: 490px;
+    padding-top: 125px;
+  }
+  article .more-than .more-one,
+article .more-than .more-two {
+    width: 50%;
+  }
+  article .more-than .more-one {
+    padding-left: 100px;
+  }
+  article .more-than .more-two {
+    margin-top: 0px;
+  }
+  article .more-than .more-two img {
+    height: auto;
+    max-height: 450px;
+  }
+  article #caja-father {
+    padding: 0px 100px;
+    width: calc(100% - 200px);
+  }
+  article #caja-father .caja-shorten {
+    background-image: url("../../images/bg-shorten-desktop.svg");
+    background-position: top left;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  article #caja-father .caja-shorten .caja-text {
+    padding-left: 15px;
+    width: calc(70% - 65px);
+    width: -webkit-calc(70% - 65px);
+    width: -moz-calc(70% - 65px);
+    color: #9e9aa7;
+    float: left;
+  }
+  article #caja-father .caja-shorten .btn-shorten {
+    float: left;
+    margin-top: 15px !important;
+    width: calc(30% - 65px);
+    width: -webkit-calc(30% - 65px);
+    width: -moz-calc(30% - 65px);
+  }
+  article #caja-father-3 {
+    background-image: url("../../images/bg-boost-desktop.svg");
+  }
+  article #caja-father-4 {
+    height: 400px;
+  }
+  article #caja-father-4 .bc-master {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+  }
+  article #caja-father-4 .bc-master h1 {
+    flex-grow: 1;
+    padding-left: 60px;
+  }
+  article #caja-father-4 .bc-master div {
+    flex-grow: 2;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  article #caja-father-4 .bc-master div .bc-component {
+    margin-top: 160px;
+    width: calc(100% / 5);
+    display: flex;
+    flex-direction: column;
+  }
+  article #caja-father-4 .bc-master div .bc-iconos {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    padding-right: 100px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
