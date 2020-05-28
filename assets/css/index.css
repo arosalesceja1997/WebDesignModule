@@ -301,6 +301,61 @@ article #caja-father-4 .bc-iconos div > img {
   color: #3e52a3;
 }
 
+.modalContainer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modalContainer .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-top: 10px solid #58abb7;
+  width: 95%;
+  overflow: scroll;
+  max-height: 50vh;
+}
+.modalContainer .modal-content .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modalContainer .modal-content .close:hover,
+.modalContainer .modal-content .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modalContainer .modal-content .bc-links-add .bc-link {
+  margin: 15px 0;
+  padding: 0 15%;
+  text-decoration: none;
+}
+.modalContainer .modal-content .bc-links-add .bc-link > div {
+  width: 100%;
+  height: auto;
+  background-color: #f0f1f6;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px 15px;
+}
+.modalContainer .modal-content .bc-links-add .bc-link > div a {
+  color: black;
+  font-size: 12px;
+}
+
 @media screen and (min-width: 900px) {
   #bc-movil {
     display: none !important;

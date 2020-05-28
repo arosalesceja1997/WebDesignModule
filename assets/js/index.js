@@ -1,4 +1,23 @@
+let db = "";
+let newDato = "";
+let datos = [];
+
+let thisurl = {
+  url: "",
+};
+
+let resp = {};
+let newUrl = "https://rel.ink/";
+
 $(document).ready(function () {
+  db = JSON.parse(localStorage.getItem("data"));
+  if (db === null) {
+    datos = [];
+  } else {
+    datos = db;
+    newD(datos);
+  }
+
   $(".btn-menu").click(function () {
     $(".nav-bar .menu").slideToggle();
   });
@@ -13,25 +32,33 @@ $(document).ready(function () {
 
   let prevH = $("#bc-container").height();
   let bclinea = $("#bc-by-linea").css("height", prevH);
-  // $("#bc-container").attrchange({
-  //   callback: function (e) {
-  //     let curH = $(this).height();
-  //     if (prevH !== curH) {
-  //       bclinea = curH;
-  //     }
-  //   },
-  // });
 });
 
-let thisurl = {
-  url: "",
-};
-
-let resp = {};
-let newUrl = "https://rel.ink/";
+function newD(datos, x = 0) {
+  let i;
+  for (x === 0 ? (i = 0) : (i = x); i < datos.length; i++) {
+    document.getElementById("addL").innerHTML +=
+      "<div class='bc-link'>" +
+      "<div>" +
+      "<a href='" +
+      datos[i].Link +
+      "'>Link 1: " +
+      datos[i].Link +
+      "</a>" +
+      "<div>" +
+      "<a href='" +
+      datos[i].Acortado +
+      "'>Link 2: " +
+      datos[i].Acortado +
+      "</a>" +
+      "</div>";
+    "</div>" + "</div>";
+  }
+}
 
 function mostrar(acortar) {
   thisurl.url = acortar;
+
   var url = "https://rel.ink/api/links/";
 
   fetch(url, {
@@ -50,10 +77,51 @@ function mostrar(acortar) {
       if (typeof response.hashid === "undefined") {
         alert("Ingresa una url valida");
       } else {
-        alert("Tu url arcortada: \n" + newUrl + response.hashid);
+        let x = "" + newUrl + response.hashid;
+        alert("Tu url arcortada: \n" + x);
+        addLink(acortar, x);
       }
-      document.getElementById("x-shorten").value = "" + ewUrl + response.hashid;
-      // console.info("Success:", typeof response.hashid);
-      // console.info("Success:", response);
     });
+}
+
+function addLink(link, acortado) {
+  datos.push({
+    Link: link,
+    Acortado: acortado,
+  });
+  localStorage.setItem("data", JSON.stringify(datos));
+  newD(datos, datos.length - 1);
+}
+
+if (document.getElementById("btnModal")) {
+  var modal = document.getElementById("tvesModal");
+  var btn = document.getElementById("btnModal");
+  var span = document.getElementsByClassName("close")[0];
+  var body = document.getElementsByTagName("body")[0];
+
+  btn.onclick = function () {
+    modal.style.display = "block";
+
+    body.style.position = "static";
+    body.style.height = "100%";
+    body.style.overflow = "hidden";
+  };
+
+  span.onclick = function () {
+    modal.style.display = "none";
+
+    body.style.position = "inherit";
+    body.style.height = "auto";
+    body.style.overflow = "visible";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+
+      body.style.position = "inherit";
+      body.style.height = "auto";
+      body.style.overflow = "visible";
+    }
+  };
 }
