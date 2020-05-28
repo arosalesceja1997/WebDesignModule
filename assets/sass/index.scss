@@ -402,7 +402,6 @@ article {
       }
 
       .bc-link>div {
-        width: 100%;
         height: auto;
         background-color: #f0f1f6;
         border-radius: 4px;
@@ -410,6 +409,16 @@ article {
         flex-direction: column;
         justify-content: space-around;
         padding: 15px 15px;
+        -ms-word-break: break-all;
+        word-break: break-all;
+
+        // Non standard for webkit
+        word-break: break-word;
+
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
 
         a {
           color: black;

@@ -342,7 +342,6 @@ article #caja-father-4 .bc-iconos div > img {
   text-decoration: none;
 }
 .modalContainer .modal-content .bc-links-add .bc-link > div {
-  width: 100%;
   height: auto;
   background-color: #f0f1f6;
   border-radius: 4px;
@@ -350,6 +349,13 @@ article #caja-father-4 .bc-iconos div > img {
   flex-direction: column;
   justify-content: space-around;
   padding: 15px 15px;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 .modalContainer .modal-content .bc-links-add .bc-link > div a {
   color: black;
