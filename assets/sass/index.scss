@@ -376,7 +376,7 @@ article {
     padding: 20px;
     border: 1px solid lightgray;
     border-top: 10px solid #58abb7;
-    width: 95%;
+    width: calc(100% - 42px);
     overflow: scroll;
     max-height: 50vh;
 
